@@ -34,10 +34,16 @@ public class TermCounter {
 	 * Returns the total of all counts.
 	 * 
 	 * @return
+	 * @throws IOException 
 	 */
 	public int size() {
-        // TODO: fill this in.
-		return -1;
+		
+		int sum = 0;
+		for (String key: keySet()) {
+			Integer count = get(key);
+			sum = sum + count;
+		}
+		return sum;
 	}
 
 	/**
